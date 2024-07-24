@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
     Name = "example-instance"
   }
 
-  security_groups = [aws_security_group.instance.id]
+  vpc_security_group_ids = [aws_security_group.instance.id]
 }
 
 resource "aws_security_group" "instance" {
