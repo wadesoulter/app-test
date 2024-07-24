@@ -23,3 +23,27 @@ sudo apt-get install -y terraform
 terraform --version
 
 echo "Terraform installation complete!"
+
+# Install Awscli
+#!/bin/bash
+
+# Update the package list and install dependencies
+sudo apt-get update -y
+sudo apt-get install -y unzip curl
+
+# Download the AWS CLI bundle
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+# Unzip the bundle
+unzip awscliv2.zip
+
+# Run the install program
+sudo ./aws/install
+
+# Verify the installation
+aws --version
+
+echo "AWS CLI installation complete!"
+
+
+
